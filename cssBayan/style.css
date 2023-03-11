@@ -8,7 +8,6 @@ body {
     padding: 0;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     background-color:antiquewhite;
 }
 
@@ -16,49 +15,108 @@ body {
     margin: 0 auto;
   }
 
-  img {
+  @media (min-width:320px) {
+    main div.container {
+    width: 80vw;
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    font-size: 2vh;
+    color: #0039a6;
+    }
+    .close, .add{
+      height: 2vh;
+    }
+  }  
+
+  @media (min-width:820px) {
+    main div.container {
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 500;
+      font-size: 4vh;
+    }
+    .close, .add{
+      height: 4vh;
+    }
+  }
+  
+  @media (min-width:1920px) {
+    main div.container {
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 700;
+      font-size: 6vh;
+    }
+    .close, .add{
+      height: 6vh;
+    }
+  }
+
+  @media (hover: hover) {
+    span {
+      display: none;
+    }
+   
+    main div.container:hover {
+      color:black;
+    }
+
+    main div.container:hover span {
+      display: inline;
+        }
+
+        label:hover img.mem {
+          height: 45vh;
+        }
+
+        label:hover img.add {
+          display: none;
+        }
+      
+        label:hover img.close {
+          display: inline;
+        }
+}
+
+  .close {
+    display: none;
+  }
+
+  input.mems:checked ~ div img.close{
+    display:inline;
+  }
+
+  input.mems:checked ~ div img.add{
     display:none;
   }
 
-  label.mems1:hover img.img1 {
-   display:block;
+  header div.container {
+    margin-left: 10vw;
+    margin-right: 10vw;
   }
 
-  input.mems1:focus ~ img.img1{
+  .mem {
     display:block;
+    height: 0vh;
+    margin: auto;
+    transition-property: height;
+    transition-duration: 0.7s;
   }
 
-   label.mems2:hover img.img2 {
-    display:block;
-   }
- 
-   input.mems2:focus ~ img.img2{
-    display:block;
-   }
+  .acc-line {
+    display:flex;
+    justify-content: space-between;
+    margin-left: 1vw;
+    padding-top: 0vh;
+  }
 
-   label.mems3:hover img.img3 {
-    display:block;
-   }
-     
-   input.mems3:focus ~ img.img3{
-    display:block;
-}
+  label {
+    cursor: pointer;
+  }
 
-label.mems4:hover img.img4 {
- display:block;
-}
- 
-input.mems4:focus ~ img.img4{
- display:block;
-}
+  input.mems:checked ~ img.mem{
+    height: 45vh;
+  }
 
-label.mems5:hover img.img5 {
- display:block;
+input {
+  appearance:none;
 }
- 
-input.mems5:focus ~ img.img5{
- display:block;
-}
-
-
-  
