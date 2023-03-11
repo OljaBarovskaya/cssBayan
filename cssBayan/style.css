@@ -9,9 +9,56 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    background-color:antiquewhite;
 }
 
 .container {
-    max-width: 1440px;
     margin: 0 auto;
   }
+
+  img {
+    display:none;
+  }
+
+  label.mems1:hover img.img1 {
+   display:block;
+  }
+
+  input.mems1:focus ~ img.img1{
+    display:block;
+  }
+
+   label.mems2:hover img.img2 {
+    display:block;
+   }
+ 
+   input.mems2:focus ~ img.img2{
+    display:block;
+   }
+
+   label.mems3:hover img.img3 {
+    display:block;
+   }
+     
+   input.mems3:focus ~ img.img3{
+    display:block;
+}
+
+label.mems4:hover img.img4 {
+ display:block;
+}
+ 
+input.mems4:focus ~ img.img4{
+ display:block;
+}
+
+label.mems5:hover img.img5 {
+ display:block;
+}
+ 
+input.mems5:focus ~ img.img5{
+ display:block;
+}
+
+
+  
