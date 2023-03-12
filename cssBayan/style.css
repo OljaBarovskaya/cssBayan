@@ -1,0 +1,128 @@
+* {
+    box-sizing: border-box;
+  }
+
+body {
+    min-height: 100vh;
+    margin: 0; 
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    background-color:antiquewhite;
+}
+
+.container {
+    margin: 0 auto;
+  }
+
+  @media (min-width:320px) {
+    main div.container {
+    width: 80vw;
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    font-size: 2vh;
+    color: #0039a6;
+    }
+    .close, .add{
+      height: 2vh;
+      transition-property: height;
+      transition-duration: 0.7s;
+    }
+  }  
+
+  @media (min-width:820px) {
+    main div.container {
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 500;
+      font-size: 4vh;
+    }
+    .close, .add{
+      height: 4vh;
+    }
+  }
+  
+  @media (min-width:1920px) {
+    main div.container {
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 700;
+      font-size: 6vh;
+    }
+    .close, .add{
+      height: 6vh;
+    }
+  }
+
+  @media (hover: hover) {
+    span {
+     display: none;
+    }
+   
+    main div.container:hover {
+      color:black;
+    }
+
+    main div.container:hover span {
+      display: inline;
+        }
+
+        label:hover img.mem {
+          height: 45vh;
+        }
+
+        label:hover img.add {
+          height: 0vh;
+        }
+      
+        label:hover img.close {
+          height: 6vh;
+        }
+}
+
+  .close {
+    height: 0vh;
+  }
+
+  input.mems:checked ~ div img.close{
+    height: 6vh;
+  }
+
+  input.mems:checked ~ div img.add{
+    height: 0vh;
+  }
+
+  header div.container {
+    margin-left: 10vw;
+    margin-right: 10vw;
+  }
+
+  .mem {
+    display:block;
+    height: 0vh;
+    margin: auto;
+    transition-property: height;
+    transition-duration: 0.7s;
+  }
+
+  .acc-line {
+    display:flex;
+    justify-content: space-between;
+    margin-left: 1vw;
+    padding-top: 0vh;
+  }
+
+  label {
+    cursor: pointer;
+  }
+
+  label:active {
+    cursor: copy;
+  }
+
+  input.mems:checked ~ img.mem{
+    height: 45vh;
+  }
+
+input {
+  appearance:none;
+}
