@@ -113,6 +113,10 @@ body {
     cursor: pointer;
   }
 
+  label:active {
+    cursor: copy;
+  }
+
   input.mems:checked ~ img.mem{
     height: 45vh;
   }
