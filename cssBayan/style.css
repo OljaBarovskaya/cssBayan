@@ -26,6 +26,8 @@ body {
     }
     .close, .add{
       height: 2vh;
+      transition-property: height;
+      transition-duration: 0.7s;
     }
   }  
 
@@ -53,7 +55,7 @@ body {
 
   @media (hover: hover) {
     span {
-      display: none;
+     display: none;
     }
    
     main div.container:hover {
@@ -69,24 +71,24 @@ body {
         }
 
         label:hover img.add {
-          display: none;
+          height: 0vh;
         }
       
         label:hover img.close {
-          display: inline;
+          height: 6vh;
         }
 }
 
   .close {
-    display: none;
+    height: 0vh;
   }
 
   input.mems:checked ~ div img.close{
-    display:inline;
+    height: 6vh;
   }
 
   input.mems:checked ~ div img.add{
-    display:none;
+    height: 0vh;
   }
 
   header div.container {
